@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FishSeaBeWithU POS </title>
+    <link rel="stylesheet" href="POS.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="fishpos">
+        <div class="header">
+            <h1>FishSeaBeWithU POS</h1>
+        </div>
+        <div class="left">
+            <table class="table1">
+                <tr>
+                    <th><img src="item1.jfif" alt="picture"></th>
+                    <th><img src="item2.jfif" alt="picture"></th>
+                    <th><img src="item3.jfif" alt="picture"></th>
+                    <th><img src="item4.jfif" alt="picture"></th>
+                    <th><img src="item5.jfif" alt="picture"></th>
+                </tr>
+                <tr class="name">
+                    <td>Bangus</td>
+                    <td>Lapu-lapu</td>
+                    <td>Maya-maya</td>
+                    <td>Galunggong</td>
+                    <td>Tilapia</td>
+                </tr>
+                <tr class="price">
+                    <td><i class="fa-solid fa-peso-sign"></i>250/kg</td>
+                    <td><i class="fa-solid fa-peso-sign"></i>500/kg</td>
+                    <td><i class="fa-solid fa-peso-sign"></i>600/kg</td>
+                    <td><i class="fa-solid fa-peso-sign"></i>300/kg</td>
+                    <td><i class="fa-solid fa-peso-sign"></i>180/kg</td>
+                </tr>
+                <tr>
+                    <td><button type="submit" onclick="addItem('bangusItem')"><i class="fa-solid fa-plus"></i>Add FishSea</button></td>
+                    <td><button type="submit" onclick="addItem('lapuItem')"><i class="fa-solid fa-plus"></i>Add FishSea</button></td>
+                    <td><button type="submit" onclick="addItem('mayaItem')"><i class="fa-solid fa-plus"></i>Add FishSea</button></td>
+                    <td><button type="submit" onclick="addItem('galungongItem')"><i class="fa-solid fa-plus"></i>Add FishSea</button></td>
+                    <td><button type="submit" onclick="addItem('tilapiaItem')"><i class="fa-solid fa-plus"></i>Add FishSea</button></td>
+                </tr>
+            </table>
+            <table class="table2">
+                <tr>
+                    <th><img src="item6.jfif" alt="picture"></th>
+                    <th><img src="item7.jfif" alt="picture"></th>
+                    <th><img src="item8.jfif" alt="picture"></th>
+                    <th><img src="item9.jfif" alt="picture"></th>
+                    <th><img src="item10.jfif" alt="picture"></th>
+                </tr>
+                <tr class="name">
+                    <td>Tuna</td>
+                    <td>Salmon</td>
+                    <td>Tamban</td>
+                    <td>Alumahan</td>
+                    <td>Hito</td>
+                </tr>
+                <tr class="price">
+                    <td><i class="fa-solid fa-peso-sign"></i>360/kg</td>
+                    <td><i class="fa-solid fa-peso-sign"></i>800/kg</td>
+                    <td><i class="fa-solid fa-peso-sign"></i>220/kg</td>
+                    <td><i class="fa-solid fa-peso-sign"></i>360/kg</td>
+                    <td><i class="fa-solid fa-peso-sign"></i>300/kg</td>
+                </tr>
+                <tr>
+                    <td><button type="submit" onclick="addItem('tunaItem')"><i class="fa-solid fa-plus"></i>Add FishSea</button></td>
+                    <td><button type="submit" onclick="addItem('salmonItem')"><i class="fa-solid fa-plus"></i>Add FishSea</button></td>
+                    <td><button type="submit" onclick="addItem('tambanItem')"><i class="fa-solid fa-plus"></i>Add FishSea</button></td>
+                    <td><button type="submit" onclick="addItem('alumahanItem')"><i class="fa-solid fa-plus"></i>Add FishSea</button></td>
+                    <td><button type="submit" onclick="addItem('hitoItem')"><i class="fa-solid fa-plus"></i>Add FishSea</button></td>
+                </tr>
+            </table>
+            <table class="table3">
+                <tr>
+                    <th><img src="item11.jfif" alt="picture"></th>
+                    <th><img src="item12.jfif" alt="picture"></th>
+                    <th><img src="item13.jfif" alt="picture"></th>
+                    <th><img src="item14.jfif" alt="picture"></th>
+                    <th><img src="item15.jfif" alt="picture"></th>
+                </tr>
+                <tr class="name">
+                    <td>Hipon</td>
+                    <td>Alimasag</td>
+                    <td>Alimango</td>
+                    <td>Pusit</td>
+                    <td>Octopus</td>
+                </tr>
+                <tr class="price">
+                    <td><i class="fa-solid fa-peso-sign"></i>700/kg</td>
+                    <td><i class="fa-solid fa-peso-sign"></i>800/kg</td>
+                    <td><i class="fa-solid fa-peso-sign"></i>900/kg</td>
+                    <td><i class="fa-solid fa-peso-sign"></i>480/kg</td>
+                    <td><i class="fa-solid fa-peso-sign"></i>800/kg</td>
+                </tr>
+                <tr>
+                    <td><button type="submit" onclick="addItem('hiponItem')"><i class="fa-solid fa-plus"></i>Add FishSea</button></td>
+                    <td><button type="submit" onclick="addItem('alimasagItem')"><i class="fa-solid fa-plus"></i>Add FishSea</button></td>
+                    <td><button type="submit" onclick="addItem('alimangoItem')"><i class="fa-solid fa-plus"></i>Add FishSea</button></td>
+                    <td><button type="submit" onclick="addItem('pusitItem')"><i class="fa-solid fa-plus"></i>Add FishSea</button></td>
+                    <td><button type="submit" onclick="addItem('octopusItem')"><i class="fa-solid fa-plus"></i>Add FishSea</button></td>
+                </tr>
+            </table>
+            <table class="table4">
+                <tr>
+                    <th><img src="item16.jfif" alt="picture"></th>
+                    <th><img src="item17.jfif" alt="picture"></th>
+                    <th><img src="item18.jfif" alt="picture"></th>
+                    <th><img src="item19.jfif" alt="picture"></th>
+                    <th><img src="item20.jfif" alt="picture"></th>
+                </tr>
+                <tr class="name">
+                    <td>Tahong</td>
+                    <td>Talaba</td>
+                    <td>Halaan</td>
+                    <td>Lobster</td>
+                    <td>Sea Urchin</td>
+                </tr>
+                <tr class="price">
+                    <td><i class="fa-solid fa-peso-sign"></i>250/kg</td>
+                    <td><i class="fa-solid fa-peso-sign"></i>300/kg</td>
+                    <td><i class="fa-solid fa-peso-sign"></i>300/kg</td>
+                    <td><i class="fa-solid fa-peso-sign"></i>900/kg</td>
+                    <td><i class="fa-solid fa-peso-sign"></i>500/kg</td>
+                </tr>
+                <tr>
+                    <td><button type="submit" onclick="addItem('tahongItem')"><i class="fa-solid fa-plus"></i>Add FishSea</button></td>
+                    <td><button type="submit" onclick="addItem('talabaItem')"><i class="fa-solid fa-plus"></i>Add FishSea</button></td>
+                    <td><button type="submit" onclick="addItem('halaanItem')"><i class="fa-solid fa-plus"></i>Add FishSea</button></td>
+                    <td><button type="submit" onclick="addItem('lobsterItem')"><i class="fa-solid fa-plus"></i>Add FishSea</button></td>
+                    <td><button type="submit" onclick="addItem('seaItem')"><i class="fa-solid fa-plus"></i>Add FishSea</button></td>
+                </tr>
+            </table>
+            <div class="logout">
+                <button type="submit"><a href="login.html"><i class="fa-solid fa-arrow-right-from-bracket"></i>Logout</a></button>
+            </div>
+        </div>
+
+        <div class="right">
+            <h2>Cart</h2>
+            <p id="cart"></p>
+            <div class="total-price" id="totalPrice">
+                <p>Total: ₱0.00</p>
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <script>
+        const itemPrices = {
+            bangusItem: 250,
+            lapuItem: 500,
+            mayaItem: 600,
+            galungongItem: 300,
+            tilapiaItem: 180,
+            tunaItem: 360,
+            salmonItem: 800,
+            tambanItem: 220,
+            alumahanItem: 360,
+            hitoItem: 300,
+            hiponItem: 700,
+            alimasagItem: 800,
+            alimangoItem: 900,
+            pusitItem: 480,
+            octopusItem: 800,
+            tahongItem: 250,
+            talabaItem: 300,
+            halaanItem: 300,
+            lobsterItem: 900,
+            seaItem: 500
+        }
+
+        const itemNames = {
+            bangusItem: 'Bangus',
+            lapuItem: 'Lapu-lapu',
+            mayaItem: 'Maya-maya',
+            galungongItem: 'Galunggong',
+            tilapiaItem: 'Tilapia',
+            tunaItem: 'Tuna',
+            salmonItem: 'Salmon',
+            tambanItem: 'Tamban',
+            alumahanItem: 'Alumahan',
+            hitoItem: 'Hito',
+            hiponItem: 'Hipon',
+            alimasagItem: 'Alimasag',
+            alimangoItem: 'Alimango',
+            pusitItem: 'Pusit',
+            octopusItem: 'Octopus',
+            tahongItem: 'Tahong',
+            talabaItem: 'Talaba',
+            halaanItem: 'Halaan',
+            lobsterItem: 'Lobster',
+            seaItem: 'Sea Urchin'
+        }
+
+        let cart = JSON.parse(localStorage.getItem('cart')) || [];
+
+        function addItem(itemId) {
+            const existingItem = cart.find(item => item.id === itemId);
+            if (existingItem) {
+                existingItem.quantity += 1;
+            } else {
+                cart.push({
+                    id: itemId,
+                    name: itemNames[itemId],
+                    price: itemPrices[itemId],
+                    quantity: 1
+                });
+            }
+            localStorage.setItem('cart', JSON.stringify(cart));
+            renderCart();
+        }
+
+        function renderCart() {
+            const cartElement = document.getElementById('cart');
+            if (cart.length === 0) {
+                cartElement.innerHTML = 'Cart is empty';
+            } else {
+                cartElement.innerHTML = cart.map((item, index) => `
+                    <div class="cart-item">
+                        <span>${item.name} - ₱${item.price} x ${item.quantity}</span>
+                        <button onclick="editItem(${index})">Edit</button>
+                        <button onclick="deleteItem(${index})">Delete</button>
+                    </div>
+                `).join('');
+            }
+            calculateTotal();
+        }
+
+        function editItem(index) {
+            const newQuantity = prompt('Enter new quantity:', cart[index].quantity);
+            if (newQuantity !== null && !isNaN(newQuantity) && newQuantity > 0) {
+                cart[index].quantity = parseInt(newQuantity);
+                localStorage.setItem('cart', JSON.stringify(cart));
+                renderCart();
+            }
+        }
+
+        function deleteItem(index) {
+            cart.splice(index, 1);
+            localStorage.setItem('cart', JSON.stringify(cart));
+            renderCart();
+        }
+
+        function calculateTotal() {
+            let total = cart.reduce((sum, item) => sum + (item.price * item.quantity), 0);
+            document.getElementById('totalPrice').innerHTML = `<p>Total: ₱${total.toFixed(2)}</p>`;
+        }
+
+        renderCart();
+    </script>
+</body>
+</html>

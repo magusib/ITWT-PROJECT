@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login</title>
+  <link rel="stylesheet" href="login.css">
+</head>
+<body>
+  <div class="login-box">
+    <h2>Login</h2>
+    <form id="loginForm">
+      <div class="input-group">
+        <label for="username">Username</label>
+        <input type="text" id="username" required>
+      </div>
+      <div class="input-group">
+        <label for="password">Password</label>
+        <input type="password" id="password" required>
+      </div>
+      <button type="submit">Login</button>
+      <p class="error-message" id="error-message"></p>
+    </form>
+  </div>
+
+  <script>
+    // Simple credentials for demonstration
+    const validUsername = "yhajjmagusib";
+    const validPassword = "yhajj";
+
+    document.getElementById("loginForm").addEventListener("submit", function(event) {
+      event.preventDefault(); // Prevent form from submitting
+
+      // Get values from the form
+      const username = document.getElementById("username").value;
+      const password = document.getElementById("password").value;
+      const errorMessage = document.getElementById("error-message");
+
+      // Validate the credentials
+      if (username === validUsername && password === validPassword) {
+        // If login is successful, redirect to the next page (main.html)
+        window.location.href = "POS.html";
+      } else {
+        // If credentials are incorrect, show an error message
+        errorMessage.textContent = "Invalid username or password.";
+      }
+    });
+  </script>
+</body>
+</html>

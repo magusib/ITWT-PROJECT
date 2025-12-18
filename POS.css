@@ -1,0 +1,286 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    min-height: 100vh;
+    overflow-x: hidden;
+}
+
+
+.fishpos {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    padding: 20px;
+    gap: 20px;
+}
+
+.header {
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.95), rgba(240, 248, 255, 0.95));
+    padding: 25px;
+    border-radius: 15px;
+    text-align: center;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.15);
+    backdrop-filter: blur(10px);
+    border: 2px solid rgba(255, 255, 255, 0.3);
+}
+
+.header h1 {
+    color: #0a4d68;
+    font-size: 2.5em;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+    letter-spacing: 2px;
+}
+
+/* Split layout container */
+.fishpos {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto 1fr;
+}
+
+@media (min-width: 1024px) {
+    .fishpos {
+        grid-template-columns: 2fr 1fr;
+        grid-template-rows: auto 1fr;
+    }
+    
+    .header {
+        grid-column: 1 / -1;
+    }
+}
+
+/* Left section - Product catalog */
+.left {
+    background: rgba(255, 255, 255, 0.9);
+    padding: 25px;
+    border-radius: 15px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.15);
+    backdrop-filter: blur(10px);
+    overflow-y: auto;
+    max-height: calc(100vh - 200px);
+}
+
+/* Right section - Cart */
+.right {
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.95), rgba(240, 255, 255, 0.95));
+    padding: 25px;
+    border-radius: 15px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.15);
+    backdrop-filter: blur(10px);
+    border: 2px solid rgba(255, 255, 255, 0.3);
+    position: sticky;
+    top: 20px;
+    max-height: calc(100vh - 200px);
+    overflow-y: auto;
+}
+
+.right h2 {
+    color: #0a4d68;
+    font-size: 2em;
+    margin-bottom: 20px;
+    text-align: center;
+    border-bottom: 3px solid #088395;
+    padding-bottom: 15px;
+}
+
+/* Tables styling */
+table {
+    width: 100%;
+    margin-bottom: 30px;
+    border-collapse: separate;
+    border-spacing: 15px;
+}
+
+table th {
+    padding: 10px;
+    text-align: center;
+}
+
+table th img {
+    width: 120px;
+    height: 120px;
+    object-fit: cover;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border: 3px solid #088395;
+}
+
+table th img:hover {
+    transform: scale(1.05) translateY(-5px);
+    box-shadow: 0 8px 25px rgba(8, 131, 149, 0.4);
+}
+
+table td {
+    padding: 8px;
+    text-align: center;
+}
+
+.name td {
+    font-weight: bold;
+    color: #0a4d68;
+    font-size: 1.1em;
+}
+
+.price td {
+    color: #088395;
+    font-weight: 600;
+    font-size: 1em;
+}
+
+/* Buttons */
+button {
+    background: linear-gradient(135deg, #088395, #05bfdb);
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 0.95em;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(8, 131, 149, 0.3);
+}
+
+button:hover {
+    background: linear-gradient(135deg, #05bfdb, #088395);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(8, 131, 149, 0.5);
+}
+
+button:active {
+    transform: translateY(0);
+}
+
+button i {
+    margin-right: 8px;
+}
+
+/* Logout button */
+.logout {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.logout button {
+    background: linear-gradient(135deg, #e74c3c, #c0392b);
+    padding: 15px 40px;
+    font-size: 1.1em;
+}
+
+.logout button:hover {
+    background: linear-gradient(135deg, #c0392b, #e74c3c);
+}
+
+.logout button a {
+    color: white;
+    text-decoration: none;
+}
+
+/* Cart styling */
+#cart {
+    margin-bottom: 20px;
+    min-height: 200px;
+    color: #0a4d68;
+}
+
+.cart-item {
+    background: rgba(8, 131, 149, 0.1);
+    padding: 15px;
+    margin-bottom: 12px;
+    border-radius: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+    border-left: 4px solid #088395;
+    transition: all 0.3s ease;
+}
+
+.cart-item:hover {
+    background: rgba(8, 131, 149, 0.2);
+    transform: translateX(5px);
+}
+
+.cart-item span {
+    flex: 1;
+    font-weight: 500;
+}
+
+.cart-item button {
+    padding: 8px 15px;
+    font-size: 0.85em;
+    background: linear-gradient(135deg, #088395, #05bfdb);
+}
+
+.cart-item button:last-child {
+    background: linear-gradient(135deg, #e74c3c, #c0392b);
+}
+
+.total-price {
+    background: linear-gradient(135deg, #0a4d68, #088395);
+    color: white;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    margin-top: 20px;
+    box-shadow: 0 4px 15px rgba(8, 131, 149, 0.4);
+}
+
+.total-price p {
+    font-size: 1.5em;
+    font-weight: bold;
+    margin: 0;
+}
+
+/* Responsive design */
+@media (max-width: 1023px) {
+    .header h1 {
+        font-size: 1.8em;
+    }
+    
+    table {
+        border-spacing: 10px;
+    }
+    
+    table th img {
+        width: 80px;
+        height: 80px;
+    }
+    
+    .right {
+        position: relative;
+        top: 0;
+        max-height: none;
+    }
+}
+
+@media (max-width: 768px) {
+    .fishpos {
+        padding: 10px;
+    }
+    
+    table {
+        border-spacing: 5px;
+    }
+    
+    table th img {
+        width: 60px;
+        height: 60px;
+    }
+    
+    button {
+        padding: 8px 12px;
+        font-size: 0.85em;
+    }
+    
+    .name td, .price td {
+        font-size: 0.9em;
+    }
+}
