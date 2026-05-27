@@ -24,24 +24,19 @@
   </div>
 
   <script>
-    // Simple credentials for demonstration
-    const validUsername = "yhajjmagusib";
-    const validPassword = "yhajj";
+    const validUsername = "jamescalvin";
+    const validPassword = "james";
 
     document.getElementById("loginForm").addEventListener("submit", function(event) {
       event.preventDefault(); // Prevent form from submitting
 
-      // Get values from the form
       const username = document.getElementById("username").value;
       const password = document.getElementById("password").value;
       const errorMessage = document.getElementById("error-message");
 
-      // Validate the credentials
       if (username === validUsername && password === validPassword) {
-        // If login is successful, redirect to the next page (main.html)
         window.location.href = "POS.html";
       } else {
-        // If credentials are incorrect, show an error message
         errorMessage.textContent = "Invalid username or password.";
       }
     });
